@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='css.css'>
+<title>Pizza Love <3</title>
+  <body>
+  <header>
+
+  	<div class="main" >
+
+
+  <ul>
+  	<li class="active"><a href="#" >Home</a></li>
+  	<li> <a href="#" >Menu</a></li>
+  	<li> <a href="#" >Gallery</a></li>
+  	<li> <a href="#" >Blog</a></li>
+  	<li> <a href="#" >Contacts</a></li>
+  	</ul>
+  </div>
+    <body>
+        <style>
+            body {
+              background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0, 0,0.25)),url('wallpaperflare-cropped.jfif');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: 100% 100%;
+            }
+            </style>
+            <img src="Pizza-Love-logo.png" class="img1" >
+            <h1 class="h1">love at first slice</h1>
+            <div id ="bottoms">
+            <button type="button"class="bot1"onclick="loadHTML()">learn more!</button>
+            <button type="button" class="bot2" onclick="document.location='form.html'">book a visit!</button>
+            </div>
+    </body>
+<script>
+function loadHTML() {
+  var learn = new XMLHttpRequest();
+  learn.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("bottoms").innerHTML = this.responseText;
+    }
+  };
+  learn.open("GET", "learn.html", true);
+  learn.send();
+}
+</script>
+</head>
+</html>
